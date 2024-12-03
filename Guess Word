@@ -10,11 +10,11 @@ int main() {
         cout << "Word: " << dashes << "\nGuesses left: " << letterGuesses << " letters, " << wordGuesses << " words\n";
         cout << "Guess: ";
         cin >> guess;
-        if (guess.length() == 1) { // Guess letter
+        if (guess.length() == 1) { 
             bool found = false;
             for (size_t i = 0; i < word.length(); i++) if (word[i] == guess[0]) { dashes[i] = guess[0]; found = true; }
             if (!found) letterGuesses--;
-        } else if (guess == word) { // Guess word
+        } else if (guess == word) { 
             cout << "Correct! The word is: " << word << endl;
             return 0;
         } else wordGuesses--;
